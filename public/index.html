@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
+    <title>Semáforo</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
-    <ul id="clientes">
-        
-    </ul>
+
+    <!-- PARA EL SEMAFORO -->
+    <button id="iniciar">KLK</button>
+    <h3 id="f"></h3>
+
+    <div id="v" style="width: 300px; height: 300px; background-color: green; margin: 0 auto;"></div>
+    <div class="box">
+        <div class="box-item box1 box1-on"></div>
+        <div class="box-item box2"></div>
+        <div class="box-item box3"></div>
+    </div>
 
     <script src="./socket.io/socket.io.js"></script>
     <script src="./js/socket-client.js"></script>
+
 </body>
 </html>
