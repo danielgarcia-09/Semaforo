@@ -26,6 +26,10 @@ io.on("connection", (socket) => {
         color: 'green'
       });
     })
+
+    socket.on('stop', (nada)=> {
+        socket.disconnect(false);
+    })
 });
 
 socketController.klk = (req, res) => {
