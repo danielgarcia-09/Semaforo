@@ -28,7 +28,7 @@ io.on("connection", (socket) => {
     })
 
     socket.on('stop', (nada)=> {
-        socket.disconnect(false);
+      io.disconnectSockets();
     })
 });
 
