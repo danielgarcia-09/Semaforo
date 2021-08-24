@@ -5,30 +5,43 @@ const socketController = {};
 io.on("connection", (socket) => {
     socket.on('red-client', (nada)=> {
       io.emit('red', {
-        class: 'box3',
-        glow: 'box3-on',
+        class: 'circle3',
+        glow: 'circle3-on',
         color: 'red'
       });
     })
 
     socket.on('yellow-client', (nada)=> {
       io.emit('yellow', {
-        class: 'box2',
-        glow: 'box2-on',
+        class: 'circle2',
+        glow: 'circle2-on',
         color: 'yellow'
       });
     })
 
     socket.on('green-client', (nada)=> {
       io.emit('green', {
-        class: 'box1',
-        glow: 'box1-on',
+        class: 'circle1',
+        glow: 'circle1-on',
         color: 'green'
       });
     })
 
-    socket.on('stop', (nada)=> {
+    socket.on('stop-socket', (nada)=> {
+
       io.disconnectSockets();
+
+      setTimeout(()=> {
+        io.emit('reconnected', 'lights reconnected');
+      }, 1000 * 22)
+    })
+
+    socket.on('stop-client', (nada)=> {
+      io.emit('stop-server', '');
+    })
+
+    socket.on('cancel-client', (nada) => {
+      io.emit('cancel-server', '');
     })
 });
 
