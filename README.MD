@@ -10,3 +10,6 @@ Utilizamos socket.io para conectar el semáforo simulado con el controlador del 
 | *Aqui podemos ver la vista del control, algo simple con boton de iniciar y uno de cancelar y el area gris es donde se puede ver el contador, tambíen cuenta con un módulo de voz para las personas discapacitadas* | *Este es el semáforo simulado* |
 | ![Vista del controlador](./cellphone.png) | ![Vista del Semáforo](./lights.png) |
 
+Link del semaforo: https://comunicacion-socketio.herokuapp.com/
+Link del controlador: https://comunicacion-socketio.herokuapp.com/cellphone.html
+
